@@ -61,9 +61,6 @@ public class WiFiRouterMacAddressPlugin extends Plugin {
     private String getBSSID() {
         String wifiRouterMacAddress = null;
         WifiManager wifi = (WifiManager) cordova.getActivity().getSystemService(Context.WIFI_SERVICE);
-		/* // Get WiFi status
-		WifiInfo info = wifi.getConnectionInfo();
-        wifiRouterMacAddress = info.getBSSID().toString(); */
 		
 		List<ScanResult> results = wifi.getScanResults();
 		ScanResult bestSignal = null;
